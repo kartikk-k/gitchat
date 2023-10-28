@@ -4,7 +4,7 @@ import { Button } from './ui/Button'
 import SidebarSearch from './SidebarSearch'
 import Accounts from './Accounts'
 import Image from 'next/image'
-import { ProfileImg } from '@/assets/avatars'
+import ProfileImg from '@/assets/avatars/Profile.png'
 
 function ChatsSidebar() {
     return (

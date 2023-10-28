@@ -1,9 +1,12 @@
 import React, { useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Avatar1, Avatar2, Avatar3, Avatar4 } from '@/assets/avatars'
 import Image from 'next/image'
 import { Button } from './ui/Button'
 import { MoreVertical } from 'lucide-react'
+import Avatar1 from '@/assets/avatars/Avatar1.png'
+import Avatar2 from '@/assets/avatars/Avatar2.png'
+import Avatar3 from '@/assets/avatars/Avatar3.png'
+import Avatar4 from '@/assets/avatars/Avatar4.png'
 
 
 const testAccountsData = [
