@@ -41,7 +41,7 @@ function ChatsLayout({ children }: { children: React.ReactNode }) {
                         animate={{ x: 0 }}
                         exit={{ x: -300 }}
                         transition={{ type: 'spring', stiffness: 200, damping: 30 }}
-                        className='md:hidden bg-background h-screen w-[300px] z-20 absolute top-0 left-0'
+                        className='md:hidden bg-background h-[100dvh] w-[300px] z-20 absolute top-0 left-0'
                     >
                         <ChatsSidebar />
                     </motion.div>

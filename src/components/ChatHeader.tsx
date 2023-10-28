@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import ProfileImg from '@/assets/avatars/Profile.png'
+import ProfileImg from '@/assets/avatars/Avatar2.png'
 import { Button } from './ui/Button'
 import { Search } from 'lucide-react'
 import { InfoCircle } from 'iconsax-react'

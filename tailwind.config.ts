@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        'xxs': '.75rem',
+      },
       colors: {
         primary: '#5865F2',
         secondary: '#2B2D31',

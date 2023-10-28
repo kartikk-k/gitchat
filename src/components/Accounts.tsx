@@ -63,34 +63,35 @@ function Accounts() {
         >
             {accounts.map((account, index) => (
                 <motion.div
-                    layout
                     key={account.id}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: index * 0.2, duration: 0.4, ease: 'easeIn' }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2 + index * 0.1, duration: 0.2, ease: 'easeIn' }}
                     onClick={() => setActiveAccount(account.id)}
-                    className={`group flex items-center justify-between p-2 cursor-pointer rounded-xl duration-300 ${activeAccount === account.id ? 'bg-secondary' : ''}`}
+                // className=
                 >
-                    <div className='flex items-center gap-2'>
-                        <div className='relative w-10 h-10 select-none'>
-                            <Image src={account.profile} alt={account.name} className='rounded-[20px] group-hover:rounded-[10px] duration-200' />
-                            <div className={`w-[7px] h-[7px] rounded-full outline outline-4 outline-background absolute bottom-0.5 right-0
+                    <div className={`group flex items-center justify-between p-2 cursor-pointer rounded-xl duration-300 ${activeAccount === account.id ? 'bg-secondary' : ''}`}>
+                        <div className='flex items-center gap-2'>
+                            <div className='relative w-10 h-10 select-none'>
+                                <Image src={account.profile} alt={account.name} className='rounded-[20px] group-hover:rounded-[10px] duration-200' />
+                                <div className={`w-[7px] h-[7px] rounded-full outline outline-4 outline-background absolute bottom-0.5 right-0
                         ${account.status === 'active' ? 'bg-green-500' : account.status === 'idle' ? 'bg-yellow-500' : 'bg-gray-500'}`}
-                            />
-                        </div>
+                                />
+                            </div>
 
-                        <div className='font-medium'>
-                            <h1 className='text-sm '>{account.name}</h1>
-                            <div className='h-4 overflow-hidden text-xs text-gray-400'>
-                                <p className='group-hover:-translate-y-4 duration-200'>{account.lastChat}</p>
-                                <p className='group-hover:-translate-y-4 duration-200'>@{account.username}</p>
+                            <div className='font-medium'>
+                                <h1 className='text-sm '>{account.name}</h1>
+                                <div className='h-4 overflow-hidden text-xs text-gray-400'>
+                                    <p className='group-hover:-translate-y-4 duration-200'>{account.lastChat}</p>
+                                    <p className='group-hover:-translate-y-4 duration-200'>@{account.username}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <Button variant={'ghost'} size={'icon'} className='w-auto'>
-                        <MoreVertical size={18} />
-                    </Button>
+                        <Button variant={'ghost'} size={'icon'} className='w-auto'>
+                            <MoreVertical size={18} />
+                        </Button>
+                    </div>
 
                 </motion.div>
             ))

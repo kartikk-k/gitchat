@@ -1,10 +1,11 @@
 import ChatHeader from '@/components/ChatHeader'
 import ChatInput from '@/components/ChatInput'
+import ChatSection from '@/components/ChatSection'
 import React from 'react'
 
 function Chat() {
     return (
-        <div className='h-full flex flex-col'>
+        <div className='h-[100dvh] overflow-hidden flex flex-col'>
             {/* chat header */}
             <div className='shrink-0'>
                 <ChatHeader />
@@ -12,12 +13,12 @@ function Chat() {
             </div>
 
             {/* chat inbox */}
-            <div className='h-full flex flex-col justify-between'>
+            <div className='flex h-full flex-col justify-between overflow-y-auto'>
                 {/* chats */}
-                <div>chats</div>
+                <ChatSection />
 
                 {/* input */}
-                <div className='p-4 bg-secondary'>
+                <div className='p-4 sticky bottom-0 shrink-0 bg-secondary'>
                     <ChatInput />
                 </div>
             </div>

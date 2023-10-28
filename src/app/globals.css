@@ -20,3 +20,18 @@ body {
 	color: rgb(var(--foreground-rgb));
 	background: rgb(var(--background));
 }
+
+/* width */
+::-webkit-scrollbar {
+  @apply w-2 rounded-md;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-[#33333f] rounded-md; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-background rounded-md; 
+}
