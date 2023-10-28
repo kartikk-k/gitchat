@@ -17,7 +17,7 @@ function ChatInput() {
                 <div className='flex items-center w-full'>
                     <div
                         onInput={(e) => setMessage(e.currentTarget.textContent || '')}
-                        className='w-full outline-none text-gray-300'
+                        className='w-full relative z-10 outline-none text-gray-300'
                         contentEditable
                         aria-multiline
                         autoFocus
@@ -26,7 +26,7 @@ function ChatInput() {
                     </div>
 
                     {!message.length && (
-                        <p className='absolute text-sm text-gray-400 select-none'>type your message here...</p>
+                        <p className='absolute z-0 text-sm text-gray-400 select-none'>type your message here...</p>
                     )}
                 </div>
             </div>
